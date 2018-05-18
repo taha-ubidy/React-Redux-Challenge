@@ -10,15 +10,17 @@ import {ADD_QUANTITY} from '../redux/products/actions';
 @connect(
   state => {
     return {
-      products: state.products.get('products'),
+      ingredients: state.ingredients.get('ingredients'),
+      formulations: state.formulations.get('formulations'),
+      formulation_ingredients: state.formulation_ingredients.get('formulation_ingredients'),
     };
   },
-  {ADD_QUANTITY, push: routeActions.push}
+  {push: routeActions.push}
 )
 export default class Products extends React.Component {
   constructor(props) {
     super(props);
-    document.title = 'Product List View';    
+    document.title = 'Products';    
   }
 
   onClickAdd = (product) => {

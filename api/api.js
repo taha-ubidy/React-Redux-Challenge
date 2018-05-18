@@ -55,11 +55,14 @@ loadFormulations();
 loadFormulationIngredients();
 
 router.route('/api/ingredients').get(function(req, res) {
-  res.status(200).json({
-    success: true,
-    count: ingredients.length,
-    data: ingredients,
-  });
+  // settimeout is just to show loading...
+  setTimeout(() => {    
+    res.status(200).json({
+      success: true,
+      count: ingredients.length,
+      data: ingredients,
+    });
+  }, 3000);
 })
 
 router.route('/api/formulations').get(function(req, res) {

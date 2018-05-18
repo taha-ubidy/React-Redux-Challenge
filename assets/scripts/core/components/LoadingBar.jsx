@@ -4,7 +4,7 @@ export default class LoadingBar extends React.Component {
 		return (
 			<div className="loading_container">
 				<div className="loading_icon">
-					<i className="fa fa-spinner fa-pulse fa-2x fa-fw"/>
+					Loading...
 				</div>
 			</div>
 		)
