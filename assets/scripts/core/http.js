@@ -114,7 +114,7 @@ export function unpackAPI(obj) {
 
 export let makeURL = _.identity;
 
-let u = url.parse('http://localhost:9001/');
+let u = url.parse('http://localhost:3000/');
 makeURL = (pathname, params) => {
   const p = url.parse(url.format({...u, pathname: pathname}));
   // p.pathname += p.pathname.charAt(p.pathname.length - 1) === '/' ? '' : '/';

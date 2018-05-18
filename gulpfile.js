@@ -83,7 +83,7 @@ var tasks = gtasks.buildSpec({
           envify({
             _: 'purge',
             NODE_ENV: process.env.NODE_ENV,
-            CONFIG_API_BASE: 'http://localhost:9001/',
+            CONFIG_API_BASE: 'http://localhost:3000/',
             CONFIG_ASSET_URL: 'http://localhost:3000/',
           }),
         ],
@@ -146,7 +146,7 @@ gulp.task('images', function() {
     .pipe(hasher());
 });
 
-gulp.task('styles_less', ['fonts', 'images'], function() {
+gulp.task('styles_less', ['images'], function() {
   return gulp
     .src(tasks.styles_less.src)
     .pipe(
